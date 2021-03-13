@@ -16,7 +16,7 @@ echo "***** BadVPN Runs on Port 7300 *****"
 badvpn-udpgw --listen-addr 127.0.0.1:7300 > /dev/null &
 netstat -nlpt | grep 7300
 sed -i '$ i\screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300' /etc/rc.local
-chmod +x /usr/bin/badvpn-udpgw
+chmod +x /usr/local/bin/badvpn-udpgw
 screen -AmdS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300
 echo
 echo
